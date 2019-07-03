@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="./node_modules/systemjs/dist/system.js" type="text/javascript" charset="UTF-8"></script>
+        <script src="./node_modules/systemjs/dist/extras/amd.js" type="text/javascript" charset="UTF-8"></script>
+        <script type="systemjs-importmap">
+            {
+                "imports": {
+                    "module-a": "http://localhost:63342/systemjs-issue/1.js",
+                    "module-b": "http://localhost:63342/systemjs-issue/2.js"
+                }
+            }
+        </script>
+        <script>
+            const modules = ["module-a", "module-b"];
+
+            Promise.all(modules.map(module => {
+                return System.import(module).catch(e => console.log(e));
+            }))
+        </script>
+    </head>
+    <body></body>
+</html>

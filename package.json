@@ -1,0 +1,22 @@
+{
+  "name": "systemjs-issue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pashokus/systemjs-issue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pashokus/systemjs-issue/issues"
+  },
+  "homepage": "https://github.com/Pashokus/systemjs-issue#readme",
+  "devDependencies": {
+    "systemjs": "3.1.2"
+  }
+}
