@@ -2,9 +2,8 @@
 
 to reproduce an issue:
 
-* run npm install
-* open index.html in a browser
-* update pathes in the systemjs-importmap based on url in the browser
+* `npm install`
+* `npm start`
 * open browser console
 * refresh couple times to reproduce
 
