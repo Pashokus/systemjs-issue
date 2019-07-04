@@ -5,8 +5,8 @@
         <script type="systemjs-importmap">
             {
                 "imports": {
-                    "module-a": "http://localhost:63342/systemjs-issue/1.js",
-                    "module-b": "http://localhost:63342/systemjs-issue/2.js"
+                    "module-a": "/1.js",
+                    "module-b": "/2.js"
                 }
             }
         </script>
@@ -14,7 +14,9 @@
             const modules = ["module-a", "module-b"];
 
             Promise.all(modules.map(module => {
-                return System.import(module).catch(e => console.log(e));
+                return System.import(module).then(m => {
+                    console.log('Finished: ', module, m)
+                }).catch(e => console.log('Error:', module, e));
             }))
         </script>
     </head>
